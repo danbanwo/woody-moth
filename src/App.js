@@ -1,17 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route, hashHistory, Link, IndexRoute} from 'react-router';
 
-var HelloWorld = React.createClass({
+import 'bootstrap/dist/css/bootstrap.css';
+import BrandStory from './components/BrandStory';
+import Footer from './components/Footer';
+import ItemPage from './components/ItemPage';
+import Header from './components/Header';
+import HomePage from './components/HomePage';
+import LookBookPage from './components/LookBookPage';
+import SalePage from './components/SalePage';
+import ShopPage from './components/ShopPage';
+import ToolBar from './components/ToolBar';
+import NavBar from './components/NavBar';
+
+var App = React.createClass({
   render: function() {
     return (
-      <div>
-        <h1>Hello World!</h1>
+      <div className="container-fluid">
+        <Header />
+        {this.props.children}
+        <Footer />
       </div>
     )
   }
 })
 
 ReactDOM.render(
-  <HelloWorld />,
+    <Router history={hashHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={HomePage} />
+        <Route path="lookbook" component={LookBookPage} />
+        <Route path="brand" component={BrandStory} />
+        <Route path="sale" component={SalePage} />
+        <Route path="shop" component={ShopPage} />
+        <Route path="item" component={ItemPage} />
+      </Route>
+    </Router>,
   document.getElementById('root')
 );
