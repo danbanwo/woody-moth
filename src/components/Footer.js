@@ -3,7 +3,7 @@ import React from 'react';
 var Footer = React.createClass({
   render: function() {
     return (
-      <footer className="footer-basic-centered">
+      <footer className="footer-basic-centered navbar-bottom">
 
 			<p className="footer-company-motto">The company motto.</p>
 
