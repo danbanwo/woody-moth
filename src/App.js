@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, hashHistory, Link, IndexRoute} from 'react-router';
-
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import BrandStory from './components/BrandStory';
 import Footer from './components/Footer';
@@ -13,8 +13,8 @@ import ShopPage from './components/ShopPage';
 import ToolBar from './components/ToolBar';
 import HomePage from './components/HomePage';
 
-
 var App = React.createClass({
+
   render: function() {
     return (
       <div>
@@ -26,6 +26,8 @@ var App = React.createClass({
       <div className="container">
         {this.props.children}
       </div>
+
+      <Footer />
     </div>
     )
   }
