@@ -7,21 +7,26 @@ import BrandStory from './components/BrandStory';
 import Footer from './components/Footer';
 import ItemPage from './components/ItemPage';
 import Header from './components/Header';
-import HomePage from './components/HomePage';
 import LookBookPage from './components/LookBookPage';
 import SalePage from './components/SalePage';
 import ShopPage from './components/ShopPage';
 import ToolBar from './components/ToolBar';
-import NavBar from './components/NavBar';
+import HomePage from './components/HomePage';
+
 
 var App = React.createClass({
   render: function() {
     return (
-      <div className="container-fluid">
+      <div>
+
+      <nav className="navbar navbar-default">
         <Header />
+      </nav>
+
+      <div className="container">
         {this.props.children}
-        <Footer />
       </div>
+    </div>
     )
   }
 })
@@ -30,11 +35,12 @@ ReactDOM.render(
     <Router history={hashHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={HomePage} />
-        <Route path="lookbook" component={LookBookPage} />
+        <Route path="look" component={LookBookPage} />
         <Route path="brand" component={BrandStory} />
         <Route path="sale" component={SalePage} />
         <Route path="shop" component={ShopPage} />
         <Route path="item" component={ItemPage} />
+        <Route path="home" component={HomePage} />
       </Route>
     </Router>,
   document.getElementById('root')

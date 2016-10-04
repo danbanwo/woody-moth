@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 var LookBookPage = React.createClass({
   render: function() {
