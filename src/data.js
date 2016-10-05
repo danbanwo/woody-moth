@@ -1,6 +1,6 @@
 let data = {
 	// bowties
-	// classic collection/////////////////////////////
+	// classic collection///////////////////////////// 
   classic : {
     bowties : {
       cedarmoth: {
