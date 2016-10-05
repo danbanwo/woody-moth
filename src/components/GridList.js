@@ -7,11 +7,13 @@ var GridList = React.createClass({
     return (
       <div className="col-lg-3 col-md-4 col-xs-6 thumb">
           <Link to={"/shop/" + this.props.object.category + '/' + this.props.object.product} className="thumbnail">
-              <img className="img-responsive" src={this.props.image} alt="" />
+          		<img className="img-responsive" src={this.props.image} alt="" />
           </Link>
           <div className="well">
-	          <h3 key={this.key}>{this.props.name}</h3>
-	          <h3 key={this.key}>{this.props.price}</h3>
+	      <Link to={"/shop/" + this.props.object.category + '/' + this.props.object.product} className="thumbnail">
+	      		<h4 key={this.key}>{this.props.name}</h4>
+	          	<h4 key={this.key}>{this.props.price}</h4>
+	      </Link>
 	      </div>
       </div>
     )
