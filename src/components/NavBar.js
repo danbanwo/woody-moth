@@ -4,9 +4,9 @@ import {Link, IndexLink} from 'react-router';
 var NavBar = React.createClass({
   render: function() {
     return (
-      <nav className="navbar navbar-fixed-top navbar-default navbar-lg">
+      <nav className="navbar navbar-fixed-top navStuff navbar-lg ">
+        <i className="hidden-xs-down col-xl-5 navbar-brand App-logo"><img className="logoImage" src="http://i.imgur.com/LYNQmL3.png" alt="Woody logo" /></i>
         <div className="container">
-          <i className="glyphicon glyphicon-user hidden-xs-down col-xl-5 navbar-brand"></i>
           <ul className="nav navbar-nav">
             <li className="nav-item"><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
             <li className="nav-item"><Link to="/shop" activeClassName="active" >Shop</Link></li>
