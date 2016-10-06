@@ -9,9 +9,9 @@ var ItemPage = React.createClass({
     return (
       <div className>
       	<h1>{url.name}</h1>
-        <h3>{url.info}</h3>
+        <h4>{url.info}</h4>
         <img src={url.image} alt="" />
-        <h3>{url.price}</h3>
+        <h4>{url.price}</h4>
       </div>
     )
   }
