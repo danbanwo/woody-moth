@@ -1,13 +1,58 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// var css = require('App.css')
 
+
+
+var headStyle = {
+  fontFamily:"newRoman",
+  color:'hsl(57, 79%, 37%)',
+  // color:"linear-gradient(blue,yellow)",
+  borderStyle:'solid black ' ,
+  borderWidth:5,
+  borderColor:'orange',
+
+
+
+};
+
+var paraStyle = {
+  fontFamily:"newRoman",
+  fontSize:20,
+  color:"black",
+  backgroundSize: 900,
+  backgroundRepeat: "no-Repeat",
+  wordSpacing: 2,
+    transform: "rotate(-3deg)",
+    borderRadius:20
+
+ };
+var background ={
+    backgroundImage:'url(http://static.wixstatic.com/media/120e3e_24b164636d158c4fcd64994d2f30596a.jpg_srz_1299_979_85_22_0.50_1.20_0.00_jpg_srz)',
+    position: "relative",
+    bottom: 50
+};
+
+ var imgStyle= {
+  width:375,
+  height:300,
+  position: "relative",
+  marginLeft:280,
+  marginTop: -25,
+  transform: "rotate(-20deg)",
+
+ }
+            
 var BrandStory = React.createClass({
   render: function() {
     return (
       <div className>
 
-        <center><h1>The Brand</h1></center>
-        <center><p>Woody Moth began in the summer of 2012. In the midst of a monumental wardrobe <br/>
+          <div style={background}>
+          </div>
+        <center><h1 style={headStyle}>The Brand</h1></center>
+        <hr style={{backgroundColor:'black'}}/ >
+        <center><p style={paraStyle}> Woody Moth began in the summer of 2012. In the midst of a monumental wardrobe <br/>
 
 crisis, I was attempting to transition from Bryan
 Bethea Urban College Grad<br/>
@@ -83,7 +128,7 @@ and professional in the same outfit.<br/>
 
 
 <div>
-	<center><br/><h1>The Moth</h1></center>
+	<center><br/><h1 style={headStyle}>The Moth</h1></center>
 </div>
 
 
